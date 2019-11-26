@@ -1,4 +1,6 @@
-FROM ubuntu:18.04
-COPY . /app
-RUN cd /app && npm install
-CMD npm start
+FROM node:8.11.1
+WORKDIR /usr/src/app
+COPY package.json .
+RUN npm install
+COPY . .
+CMD [ "npm", "start" ]
