@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Logger from "./Logger/MainLogger";
+import Pointer from "./Pointer/Pointer";
+import {BrowserRouter as Router, Switch, Link, Route} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      This component will hold both Pointer and Logger
+      <Logger></Logger>
+      <Pointer></Pointer>
     </div>
   );
 }
+
 
 export default App;
